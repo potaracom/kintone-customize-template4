@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "ws": "ws --https --cert ../localhost+2.pem --key ../localhost+2-key.pem",
-    "dev": "kintone-customize-uploader manifest.dev.json",
-    "prod": "kintone-customize-uploader manifest.prod.json",
+    "dev": "kintone-customize-uploader manifest.dev.json && webpack --mode=development --watch",
+    "prod": "webpack --mode=production && kintone-customize-uploader manifest.prod.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
